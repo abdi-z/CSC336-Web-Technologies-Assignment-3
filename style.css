@@ -1,0 +1,18 @@
+body {
+  background-color: aquamarine;
+}
+
+.flexi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.compJ {
+  /* background-color: #1f2833; */
+
+}
+/*
+.compJ h4 ,h3,p {
+  color: #66fcf1;
+} */

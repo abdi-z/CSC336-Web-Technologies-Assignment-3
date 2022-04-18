@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jobs.pk</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- GITHUB COPILOT gets the wrong script jquery slim -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <div class="container">
+      <div class="row">
+        <div class="col-11 text-center font-weight-bold">Jobs Available</div>
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type</label>
+        <input
+          type="text"
+          class="form-control"
+          name="type"
+          id="type"
+          aria-describedby="helpId"
+          placeholder="E.g Construction"
+        />
+        <small id="typeHelp" class="form-text text-muted"
+          >Enter type of the job</small
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="budget">Budget</label>
+        <input
+          type="number"
+          class="form-control"
+          name="budget"
+          id="budget"
+          aria-describedby="helpId"
+          placeholder="E.g 5000 "
+        />
+        <small id="budgetHelp" class="form-text text-muted"
+          >Enter budget for your required job</small
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          name="description"
+          id="description"
+          aria-describedby="helpId"
+          placeholder="E.g  I need a plumber to fix my sink."
+        />
+        <small id="descriptionHelp" class="form-text text-muted"
+          >Enter Description for the job</small
+        >
+      </div>
+
+      <button id="addBtn" class="btn btn-primary">Add new</button>
+      <div class="" id="jobs">
+        <img
+          src="./Pulse-1s-400px.svg"
+          class="img-fluid rounded mx-auto d-block"
+        />
+      </div>
+      <!-- Button trigger modal -->
+      <!-- <button
+        type="button"
+        class="btn btn-primary btn-lg"
+        data-toggle="modal"
+        data-target="#updateModal"
+      >
+        Launch
+      </button> -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="updateModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modelTitleId"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Update Record</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="hidden" id="updateId" /><br />
+              <div class="form-group">
+                <label for="updateType"></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="updateType"
+                  id="updateType"
+                  aria-describedby="updateTypehelpId"
+                  placeholder=""
+                />
+                <small id="helpId" class="form-text text-muted"
+                  >Help text</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="updateBudget"></label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="updateBudget"
+                  id="updateBudget"
+                  aria-describedby="updateBudgethelpId"
+                  placeholder=""
+                />
+                <small id="updateBudgethelpId" class="form-text text-muted"
+                  >Help text</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="updateDes"></label>
+                <textarea
+                  class="form-control"
+                  name="updateDes"
+                  id="updateDes"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="updateSave" class="btn btn-primary">Update</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
