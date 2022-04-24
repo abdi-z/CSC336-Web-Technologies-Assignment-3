@@ -1,16 +1,42 @@
 body {
-  background-color: aquamarine;
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
 }
 
+.logo{
+  font-family: 'Montserrat', sans-serif;
+}
+.custBlckBtn{
+  background-color: black;
+  color:white
+}
 .flexi {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.navbr{
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  padding-top: 1.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.flexiR{
+  display: flex;
+  flex-direction: row;
+  justify-content:right;
+  list-style: none;
+}
 
+.flexiR li {
+  padding-left:1rem;
+  padding-right: 1rem;
+}
 .compJ {
   /* background-color: #1f2833; */
-
 }
 /*
 .compJ h4 ,h3,p {
