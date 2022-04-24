@@ -3,7 +3,7 @@ $(document).ready(() => {
   let d = new Date();
   $(".display-5").prepend(d.toDateString());
   $("#jobs").on("click", ".btn-danger", handleDelete);
-  $("#jobs").on("click", ".btn-warning", handleUpdate);
+  $("#jobs").on("click", ".btn-secondary", handleUpdate);
   $("#addBtn").on("click", addJob);
   $("#updateSave").click(() => {
     var id = $("#updateId").val();
@@ -84,8 +84,8 @@ function loadJobs() {
       var jobs = $("#jobs");
       jobs.empty();
       for (var i = 0; i < res.length; i++) {
-        jobs.append(`<div class="compJ border border-dark p-2 m-4" data-id=${res[i]._id}><h2><b>${res[i].type}</b></h2>
-        <div class="flexi"><h4><i>${res[i].budget}</i></h4>
+        jobs.append(`<div class="compJ bord p-2 m-4" data-id=${res[i]._id}><h3><b>${res[i].type}</b></h3>
+        <div class="flexi"><h5>Est.Budget: Rs <i>${res[i].budget}</i></h5>
         <div>
         <button class="btn btn-secondary">Edit</button>
 
@@ -94,7 +94,7 @@ function loadJobs() {
         
         </div>
         
-        <h3>Details:</h3>
+        <h5>Details:</h5>
         <p>${res[i].description}</p>
         </div>`);
       }
